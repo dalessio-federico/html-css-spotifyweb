@@ -7,17 +7,29 @@
 /* impostazioni posizionamento sezioni */
 .wrapper {
   height: 100vh;
-    width: 100%;
-  background-color: #080b12;
+  width: 100%;
+  background-color: #172136;
+  overflow: scroll;
 }
 
 
 .ms_box_contenuto {
   margin-left: 200px;
+  margin-top: 75px;
   width: calc(100% - 200px) ;
-  height: 650px;
   background-color: teal;
   overflow-y: auto;
+}
+
+.ms_barra_fixed_top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-left: 200px;
+  width: calc(100% - 200px);
+  height: 75px;
+  background-color: #00000069;
+  color: white;
 }
 
 .ms_nav_verticale {
