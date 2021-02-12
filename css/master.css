@@ -3,6 +3,19 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* regole generiche */
+.ms_flex_column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.ms_flex_row {
+  display: flex;
+  flex-direction: row;
+}
+
+/* fine regole generiche */
 
 /* impostazioni posizionamento sezioni */
 .wrapper {
@@ -14,9 +27,9 @@
 
 
 .ms_box_contenuto {
-  margin-left: 200px;
+  margin-left: 150px;
   margin-top: 75px;
-  width: calc(100% - 200px) ;
+  width: calc(100% - 150px) ;
   background-color: teal;
   overflow-y: auto;
 }
@@ -25,8 +38,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  margin-left: 200px;
-  width: calc(100% - 200px);
+  margin-left: 150px;
+  width: calc(100% - 150px);
   height: 75px;
   background-color: #00000069;
   color: white;
@@ -36,9 +49,11 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 200px;
+  width: 150px;
   height: calc(100% - 75px);
   background-color: black;
+  min-height: 90%;
+  color:white;
 }
 
 footer {
@@ -48,5 +63,73 @@ footer {
   right: 0;
   height: 75px;
   background-color: #282828;
+  justify-content: space-between;
 }
 /* fine impostazioni posizionamento sezioni */
+
+/* inmpostazioni navba verticale */
+/* da cancellare */
+
+.ms_user {
+  background-color: red;
+}
+.ms_user,
+.ms_nav {
+  height: 132.675px;
+}
+.ms_playlist {
+  height: 398.038px;
+  overflow: auto;
+}
+
+.ms_logo {
+  height: 60px;
+  color: white;
+}
+.ms_logo_mini {
+  display: none;
+  max-width: 100%;
+}
+/* da cancellare */
+/* fine impostazioni navbar verticale */
+
+/* impostazione mediaplayer */
+.ms_player_dx,
+.ms_player_sx {
+  width: 25%;
+}
+.ms_player_centro {
+  width: 40%;
+}
+
+.ms_player_dx,
+.ms_player_sx,
+.ms_player_centro {
+  background-color: white;
+}
+/* fine impostazione mediaplayer {
+
+} */
+
+
+@media screen and (max-width : 768px) {
+  .ms_nav_verticale {
+    width: 60px;
+  }
+  .ms_barra_fixed_top {
+    margin-left: 60px;
+    width: calc(100% - 60px);
+  }
+  .ms_box_contenuto {
+    margin-left: 60px;
+    width: calc(100% - 60px);
+  }
+  .ms_playlist,
+  .ms_user,
+  .ms_logo {
+    display: none;
+  }
+  .ms_logo_mini {
+    display: block;
+  }
+}
