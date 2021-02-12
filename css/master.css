@@ -7,7 +7,6 @@
 .ms_flex_column {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
 }
 
 .ms_flex_row {
@@ -42,6 +41,8 @@
   width: calc(100% - 150px);
   height: 75px;
   background-color: #00000069;
+  justify-content: flex-end;
+  align-items: center;
   color: white;
 }
 
@@ -72,23 +73,27 @@ footer {
 
 .ms_user {
   background-color: red;
+  align-items: flex-end;
 }
-.ms_user,
-.ms_nav {
+.ms_user{
   height: 132.675px;
 }
 .ms_playlist {
   height: 398.038px;
   overflow: auto;
 }
+.ms_nav {
+  margin-bottom: 60px;
+}
 
 .ms_logo {
-  height: 60px;
+  margin-bottom: 60px;
   color: white;
 }
 .ms_logo_mini {
   display: none;
   max-width: 100%;
+  margin-bottom: 60px;
 }
 /* da cancellare */
 /* fine impostazioni navbar verticale */
@@ -107,10 +112,11 @@ footer {
 .ms_player_centro {
   background-color: white;
 }
-/* fine impostazione mediaplayer {
+/* fine impostazione mediaplayer */
 
-} */
-
+.ms_barra_fixed_top p {
+  margin-right: 20px;
+}
 
 @media screen and (max-width : 768px) {
   .ms_nav_verticale {
