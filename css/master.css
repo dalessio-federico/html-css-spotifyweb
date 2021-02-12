@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* impostazioni posizionamento sezioni */
+.wrapper {
+  height: 100vh;
+    width: 100%;
+  background-color: #080b12;
+}
+
+
+.ms_box_contenuto {
+  margin-left: 200px;
+  width: calc(100% - 200px) ;
+  height: 650px;
+  background-color: teal;
+  overflow-y: auto;
+}
+
+.ms_nav_verticale {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: calc(100% - 75px);
+  background-color: black;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 75px;
+  background-color: #282828;
+}
+/* fine impostazioni posizionamento sezioni */
