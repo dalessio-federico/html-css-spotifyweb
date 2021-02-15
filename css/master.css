@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 /* regole generiche */
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+}
+
 .ms_flex_column {
   display: flex;
   flex-direction: column;
@@ -29,7 +34,8 @@
   margin-left: 150px;
   margin-top: 75px;
   width: calc(100% - 150px) ;
-  background-color: teal;
+  background-color: #0b162a;
+  color: white;
   overflow-y: auto;
 }
 
@@ -47,23 +53,23 @@
 }
 
 .ms_nav_verticale {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 150px;
   height: calc(100% - 75px);
   background-color: black;
-  min-height: 90%;
+  min-height: 500px;
   color:white;
 }
 
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   height: 75px;
-  background-color: #282828;
+  background-color: #2f3434;
   justify-content: space-between;
 }
 /* fine impostazioni posizionamento sezioni */
@@ -76,7 +82,7 @@ footer {
   align-items: flex-end;
 }
 .ms_user{
-  height: 132.675px;
+  min-height: 70px;
 }
 .ms_playlist {
   height: 398.038px;
@@ -86,15 +92,80 @@ footer {
   margin-bottom: 60px;
 }
 
+/* impostazioni logo */
 .ms_logo {
-  margin-bottom: 60px;
-  color: white;
+  padding: 20px 5px;
 }
 .ms_logo_mini {
   display: none;
-  max-width: 100%;
-  margin-bottom: 60px;
+  width: 90%;
+  padding-top: 10px;
+  padding-left: 10px;
 }
+/* fine impostazioni logo */
+
+/* impostazioni liste */
+.ms_nav_verticale li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  padding-left: 10px;
+}
+.ms_nav_verticale li:hover {
+  border-left: 2px solid #adff2f;
+}
+.ms_nav_verticale li:hover img,
+.ms_nav_verticale li:hover p {
+  opacity: 1;
+}
+
+.ms_nav_verticale .ms_nav img,
+.ms_nav_verticale .ms_nav p,
+.ms_nav_verticale .ms_playlist p,
+.ms_nav_verticale .ms_user p,
+.ms_nav_verticale .ms_user img {
+  opacity: 0.60;
+}
+
+
+
+
+/* fine impostazioni liste */
+
+/* impostazioni prima lista */
+.ms_nav_verticale .ms_nav li img {
+  width: 20%;
+  margin-right: 10px;
+}
+/* fine impostazioni prima lista */
+
+/* impostazioni seconda lista */
+.ms_nav_verticale h3 {
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 10px;
+  margin-bottom: 5px;
+}
+
+.ms_square {
+  display: inline-block;
+  position: relative;
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+  background-color: #a3a3a3;
+  color: black;
+  font-size: 35px;
+  font-weight: 800;
+}
+.ms_square span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+}
+
+
 /* da cancellare */
 /* fine impostazioni navbar verticale */
 
@@ -115,27 +186,38 @@ footer {
 /* fine impostazione mediaplayer */
 
 .ms_barra_fixed_top p {
-  margin-right: 20px;
+  margin-right: 45px;
 }
 
-@media screen and (max-width : 768px) {
+@media screen and (max-width : 421px) {
+  /* responsive barra laterale */
   .ms_nav_verticale {
-    width: 60px;
+    width: 40px;
   }
-  .ms_barra_fixed_top {
-    margin-left: 60px;
-    width: calc(100% - 60px);
+  .ms_nav_verticale .ms_nav p {
+    display: none;
   }
-  .ms_box_contenuto {
-    margin-left: 60px;
-    width: calc(100% - 60px);
+  .ms_nav_verticale .ms_nav li img {
+    width: 90%;
+    margin: 0;
   }
   .ms_playlist,
   .ms_user,
-  .ms_logo {
+  .ms_logo,
+  .ms_nav_verticale h3 {
     display: none;
   }
   .ms_logo_mini {
     display: block;
+    margin-bottom: 10px;
+  }
+  /* fine responsive barra laterale */
+  .ms_barra_fixed_top {
+    margin-left: 40px;
+    width: calc(100% - 40px);
+  }
+  .ms_box_contenuto {
+    margin-left: 40px;
+    width: calc(100% - 40px);
   }
 }
