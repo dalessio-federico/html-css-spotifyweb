@@ -80,6 +80,7 @@ footer {
   height: 75px;
   background-color: #2f3434;
   justify-content: space-between;
+  align-items: center;
   color: white;
 }
 /* fine impostazioni posizionamento sezioni */
@@ -229,12 +230,12 @@ footer {
 
 /* impostazione mediaplayer */
 /* dimensioni box */
-.ms_player_dx,
-.ms_player_sx {
-  width: 15%;
-}
+
 .ms_player_centro {
-  width: 40%;
+  height: 100%;
+  flex-grow: 2;
+  justify-content: space-around;
+  align-items: center;
 }
 /* fine dimensioni box */
 
@@ -249,7 +250,7 @@ footer {
   margin: 0 10px;
 }
 .ms_player_sx img {
-  width: 45px;
+  width: 30px;
   margin-right: 8px;
 }
 
@@ -257,10 +258,11 @@ footer {
   display: inline-block;
 }
 .ms_testo_boxsx h5 {
-  font-size: 16px;
+  font-size: 9px;
   font-weight: bold;
 }
 .ms_testo_boxsx p {
+  font-size: 7px;
   opacity: 0.60;
 }
 .ms_testo_boxsx p:hover {
@@ -269,7 +271,7 @@ footer {
 }
 
 .ms_player_sx i {
-  font-size: 18px;
+  font-size: 12px;
   opacity: 0.60;
   margin-right: 5px;
 }
@@ -278,7 +280,39 @@ footer {
 }
 /* fine impostazioni box_sx */
 
+/* impostazione box_dx */
+.ms_player_dx {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.ms_player_dx .ms_icon_dx i {
+  padding: 0 2px;
+  font-size: 10px;
+}
+
+.ms_volume_row {
+  position: relative;
+  width: 100px;
+  margin: 0 6px;
+  border: 2px solid #585858;
+  border-radius: 20px;
+  background-color: #585858;
+}
+/* fine impostazioni sezione dx */
+/* impostazioni sezione centrale */
+.ms_media_bar {
+  position: relative;
+  width: 60%;
+  margin: 0 6px;
+  border: 2px solid #585858;
+  border-radius: 20px;
+  background-color: #585858;
+}
+
 /* fine impostazione mediaplayer */
+
+
 
 /* impostazioni barra fixed_top */
 .ms_barra_fixed_top a {
@@ -294,7 +328,7 @@ footer {
 
 
 /* impostazioni resposivity */
-@media screen and (max-width : 421px) {
+@media screen and (max-width : 550px) {
   /* responsive barra laterale */
   .ms_nav_verticale {
     width: 40px;
