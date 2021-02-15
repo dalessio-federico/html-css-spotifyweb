@@ -185,6 +185,8 @@ footer {
   font-size: 10px;
 }
 /* fine impostazioni ms_user_top */
+
+/* impostazioni ms_user_bottom */
 .ms_user .ms_user_bottom {
   padding-top: 10px;
   align-items: center;
@@ -207,9 +209,6 @@ footer {
   font-size: 14px;
   font-weight: bold;
 }
-/* impostazioni ms_user_bottom */
-
-
 /* fine impostazioni ms_user */
 /* fine impostazioni navbar verticale */
 
@@ -229,8 +228,15 @@ footer {
 }
 /* fine impostazione mediaplayer */
 
-.ms_barra_fixed_top p {
+/* impostazioni barra fixed_top */
+.ms_barra_fixed_top a {
   margin-right: 45px;
+  padding: 10px 35px;
+}
+
+.ms_box_contenuto .ms_barra_fixed_top .ms_btn {
+  border: 1px solid white;
+  border-radius: 20px;
 }
 
 @media screen and (max-width : 421px) {
