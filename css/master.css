@@ -54,6 +54,7 @@ a p {
 
 .ms_barra_fixed_top {
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
   margin-left: 150px;
@@ -375,7 +376,7 @@ font-size: 7px;
 .ms_mediabar_loading {
   position: absolute;
   top: 23%;
-  left: 19%;
+  left: 18%;
   width: 12%;
   margin: 0 6px;
   border: 2px solid  #c1c1c1;
@@ -406,13 +407,14 @@ font-size: 7px;
 /* impostazioni contenuto */
 .ms_box_contenuto .ms_selction_top {
   justify-content: center;
-  flex-basis: 20%;
+  flex-wrap: wrap;
   margin-bottom: 60px;
 }
 
+/*sezione top*/
 .ms_selction_top .testo a{
   margin: 5px 5px;
-  font-size: 9px;
+  font-size: 12px;
   opacity: 0.6;
 }
 .ms_greenbar {
@@ -432,7 +434,72 @@ font-size: 7px;
 .testo:hover .ms_greenbar {
   opacity: 1;
 }
+/* fine sezione top */
 
+/* sezione main contenuto */
+.main_contenuto {
+  margin-left: 20px;
+}
+
+.row {
+  margin-bottom: 60px;
+}
+.main_contenuto h2 {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.ms_media {
+  width: 200px;
+  margin-right: 30px;
+}
+
+.ms_media_testo {
+  text-align: center;
+}
+
+.ms_immagine {
+  position: relative;
+  margin-bottom: 10px;
+}
+.ms_media img {
+  width: 100%;
+}
+.ms_img_cover {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000a3;
+  opacity: 0;
+}
+.ms_img_cover i {
+  font-size: 65px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+}
+
+.ms_media:hover .ms_img_cover {
+  opacity: 1;
+}
+
+.ms_media h5 {
+  margin-bottom: 8px;
+}
+.ms_media p {
+  opacity: 0.60;
+  margin-bottom: 10px;
+  font-size: 10px;
+}
+
+.ms_img_circle {
+  border-radius: 50%;
+}
+/* fine sezione main contenuto */
 /* fine impostazioni contenuto */
 
 
@@ -517,6 +584,11 @@ font-size: 7px;
   .ms_box_contenuto {
     margin-left: 40px;
     width: calc(100% - 40px);
+  }
+}
+  @media screen and (max-width : 850px){
+  .contents {
+    flex-wrap: wrap;
   }
 }
 /* fine informazioni responsivity */
