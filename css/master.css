@@ -71,9 +71,9 @@ a p {
   top: 0;
   left: 0;
   width: 150px;
-  height: calc(100% - 75px);
+  height: calc(100% - 60px);
   background-color: black;
-  min-height: 500px;
+  min-height: 450px;
   color:white;
 }
 
@@ -82,7 +82,7 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 75px;
+  height: 60px;
   background-color: #2f3434;
   justify-content: space-between;
   align-items: center;
@@ -450,7 +450,7 @@ font-size: 7px;
 }
 
 .ms_media {
-  width: 200px;
+  width: 140px;
   margin-right: 30px;
 }
 
@@ -589,6 +589,13 @@ font-size: 7px;
   @media screen and (max-width : 850px){
   .contents {
     flex-wrap: wrap;
+  }
+
+  .ms_player_sx .ms_testo_boxsx {
+    margin-right: 20px;
+  }
+  .ms_player_sx i {
+    display: block;
   }
 }
 /* fine informazioni responsivity */
